@@ -132,7 +132,14 @@ SWITCH(
 ```
 
 ## Dashboard & Visualization
+
+---
 Visualizations, primarily column charts, were used extensively to analyze these KPIs and identify patterns in the data.
+
+![Main Dashboard](https://github.com/Sayan-J-Pandit/Customer-Churn-Dashboard/blob/main/Customer%20Churn%20Dashboard%20self-images-0.jpg)
+![Analysis Acorss Service](https://github.com/Sayan-J-Pandit/Customer-Churn-Dashboard/blob/main/Customer%20Churn%20Dashboard%20self-images-1.jpg)
+![Analysis Acorss Segments](https://github.com/Sayan-J-Pandit/Customer-Churn-Dashboard/blob/main/Customer%20Churn%20Dashboard%20self-images-2.jpg)
+
 
 
 ### **Charts & Visuals Used:**
@@ -143,11 +150,17 @@ Visualizations, primarily column charts, were used extensively to analyze these 
 - **Clustered Column Chart** (Comparison of Churn Factors)
 - **Cards & Multi-Row Cards** (KPI Highlights)
 ### **Insights & Recommendations**
-A dedicated slide in the Power BI dashboard presents actionable recommendations based on the analysis.
----
+
+![keyInsights & Conclusions](https://github.com/Sayan-J-Pandit/Customer-Churn-Dashboard/blob/main/Customer%20Churn%20Dashboard%20self-images-3.jpg)
+![Suggestion](https://github.com/Sayan-J-Pandit/Customer-Churn-Dashboard/blob/main/Customer%20Churn%20Dashboard%20self-images-4.jpg)
+Additional:
+![Additional:Suggestion in Details](https://github.com/Sayan-J-Pandit/Customer-Churn-Dashboard/blob/main/Customer%20Churn%20Dashboard%20self-images-5.jpg)
+
 ## 📌 Conclusion
+
 This project provides a **data-driven understanding of customer churn** and identifies key factors influencing retention. The insights gained from this analysis can help businesses **optimize customer engagement strategies and reduce churn rates**.
----
+
+
 ## 🚀 How to Use This Repository
 1. Download the dataset from the provided sources.
 2. Open the **Power BI file** to explore the visualizations.
