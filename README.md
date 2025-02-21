@@ -81,3 +81,43 @@ else if [Tenure] < 60 then "<5 Years"
 else if [Tenure] < 72 then "<6 Years"
 else "6+ Years"
 ```
+## Analytics (Power BI Measures)
+Used **DAX formulas** to derive key metrics for churn analysis:
+
+#### **%Device Protection**
+```DAX
+DIVIDE(
+CALCULATE(COUNT('01 Churn-Dataset'[DeviceProtection]), '01 Churn-Dataset'[DeviceProtection] = "Yes", '01 Churn-Dataset'[Churn] = "C-Yes"),
+CALCULATE(COUNT('01 Churn-Dataset'[DeviceProtection]), '01 Churn-Dataset'[Churn] = "C-Yes"),
+0
+)
+```
+#### **%Having Dependents**
+```DAX
+DIVIDE(
+CALCULATE(COUNT('01 Churn-Dataset'[Dependents]), '01 Churn-Dataset'[Dependents] = "Yes", '01 Churn-Dataset'[Churn] = "C-Yes"),
+CALCULATE(COUNT('01 Churn-Dataset'[Dependents]), '01 Churn-Dataset'[Churn] = "C-Yes"),
+0
+)
+```
+
+Similar DAX formulas were used for:
+- **% Having Dependents**
+- **% Having Partner**
+- **% Using Internet Service**
+- **% Using Multiple Lines**
+- **% Using Online Backup**
+- **% Using Online Security**
+- **% Using Paperless Billing**
+- **% Using Phone Service**
+- **% Using Streaming Movies**
+- **% Using Streaming TV**
+- **% Using Tech Support**
+
+#### **Churn Rate Calculation**
+This measure calculates the churn percentage dynamically. This formula was initially generated with the aid of ChatGPT (through AI prompting), but contained errors that were subsequently identified and corrected by the author prior to implementation.
+```DAX
+%Churn =
+VAR TotalCustomers = CALCULATE(COUNT('01 Churn-Dataset'[customerID]), ALL('01 Churn-Dataset'[Churn]))
+VAR ChurnedCustomers = CALCULATE(COUNT('01 Churn-Dataset'[customerID]), '01 Churn-Dataset'[Churn] = "C-Yes")
+VAR SelectedChurn = SELECTEDVALUE('01 Churn-Dataset'[Churn], "All")
