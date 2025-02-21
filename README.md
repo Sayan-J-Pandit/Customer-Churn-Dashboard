@@ -143,12 +143,12 @@ Visualizations, primarily column charts, were used extensively to analyze these 
 
 
 ### **Charts & Visuals Used:**
-- **Gauge Chart** (Overall Churn Rate)
-- **Line Chart** (Trends over Time)
-- **Stacked Bar Chart** (Churn by Service Usage)
-- **Doughnut & Pie Charts** (Category Distributions)
-- **Clustered Column Chart** (Comparison of Churn Factors)
-- **Cards & Multi-Row Cards** (KPI Highlights)
+- **Gauge Chart** 
+- **Line Chart** 
+- **Stacked Bar Chart** 
+- **Doughnut & Pie Charts** 
+- **Clustered Column Chart**
+- **Cards & Multi-Row Cards**
 ### **Insights & Recommendations**
 
 ![keyInsights & Conclusions](https://github.com/Sayan-J-Pandit/Customer-Churn-Dashboard/blob/main/Customer%20Churn%20Dashboard%20self-images-3.jpg)
