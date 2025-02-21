@@ -86,19 +86,19 @@ Used **DAX formulas** to derive key metrics for churn analysis:
 
 #### **%Device Protection**
 ```DAX
+%Device Protection =
 DIVIDE(
-CALCULATE(COUNT('01 Churn-Dataset'[DeviceProtection]), '01 Churn-Dataset'[DeviceProtection] = "Yes", '01 Churn-Dataset'[Churn] = "C-Yes"),
-CALCULATE(COUNT('01 Churn-Dataset'[DeviceProtection]), '01 Churn-Dataset'[Churn] = "C-Yes"),
-0
-)
+CALCULATE(COUNT('01 Churn-Dataset'[DeviceProtection]),'01 Churn-Dataset'[DeviceProtection] ="Yes",'01 Churn-Dataset'[Churn] = "C-Yes"),
+CALCULATE(COUNT('01 Churn-Dataset'[DeviceProtection]),'01 Churn-Dataset'[Churn] = "C-Yes"),
+0)
 ```
 #### **%Having Dependents**
 ```DAX
+%Having Dependents =
 DIVIDE(
-CALCULATE(COUNT('01 Churn-Dataset'[Dependents]), '01 Churn-Dataset'[Dependents] = "Yes", '01 Churn-Dataset'[Churn] = "C-Yes"),
-CALCULATE(COUNT('01 Churn-Dataset'[Dependents]), '01 Churn-Dataset'[Churn] = "C-Yes"),
-0
-)
+CALCULATE(COUNT('01 Churn-Dataset'[Dependents]),'01 Churn-Dataset'[Dependents] = "Yes",'01 Churn-Dataset'[Churn] = "C-Yes"),
+CALCULATE(COUNT('01 Churn-Dataset'[Dependents]),'01 Churn-Dataset'[Churn] ="C-Yes"),
+0)
 ```
 
 Similar DAX formulas were used for:
@@ -117,7 +117,40 @@ Similar DAX formulas were used for:
 #### **Churn Rate Calculation**
 This measure calculates the churn percentage dynamically. This formula was initially generated with the aid of ChatGPT (through AI prompting), but contained errors that were subsequently identified and corrected by the author prior to implementation.
 ```DAX
-%Churn =
+%Churn = 
 VAR TotalCustomers = CALCULATE(COUNT('01 Churn-Dataset'[customerID]), ALL('01 Churn-Dataset'[Churn]))
 VAR ChurnedCustomers = CALCULATE(COUNT('01 Churn-Dataset'[customerID]), '01 Churn-Dataset'[Churn] = "C-Yes")
-VAR SelectedChurn = SELECTEDVALUE('01 Churn-Dataset'[Churn], "All")
+VAR SelectedChurn = SELECTEDVALUE('01 Churn-Dataset'[Churn], "All")  // Default to "All" if nothing is selected
+
+RETURN 
+SWITCH(
+    SelectedChurn,
+    "C-Yes", DIVIDE(ChurnedCustomers, TotalCustomers) * 100,  // % of churned customers
+    "C-No", DIVIDE(TotalCustomers - ChurnedCustomers, TotalCustomers) * 100,  // % of non-churned customers
+    100  // When "All" is selected, show 100%
+)
+```
+
+## Dashboard & Visualization
+Visualizations, primarily column charts, were used extensively to analyze these KPIs and identify patterns in the data.
+
+
+### **Charts & Visuals Used:**
+- **Gauge Chart** (Overall Churn Rate)
+- **Line Chart** (Trends over Time)
+- **Stacked Bar Chart** (Churn by Service Usage)
+- **Doughnut & Pie Charts** (Category Distributions)
+- **Clustered Column Chart** (Comparison of Churn Factors)
+- **Cards & Multi-Row Cards** (KPI Highlights)
+### **Insights & Recommendations**
+A dedicated slide in the Power BI dashboard presents actionable recommendations based on the analysis.
+---
+## 📌 Conclusion
+This project provides a **data-driven understanding of customer churn** and identifies key factors influencing retention. The insights gained from this analysis can help businesses **optimize customer engagement strategies and reduce churn rates**.
+---
+## 🚀 How to Use This Repository
+1. Download the dataset from the provided sources.
+2. Open the **Power BI file** to explore the visualizations.
+3. Review the transformations in **Power Query & DAX measures**.
+4. Use the insights and recommendations to improve customer retention strategies.
+**For further details or inquiries, feel free to reach out!** 🎯
