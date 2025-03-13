@@ -41,7 +41,7 @@ Several columns were simplified in Excel for easier interpretation:
 
 * **Partner:** "Yes" was replaced with "Partnered", and "No" was replaced with "Single". 
 
-These replacements were done using Excel's **Find & Replace (Ctrl + F → Replace All)** functionality. 
+These replacements were done using Excel's **Find & Replace (selecting a column, Ctrl + F → Replace All)** functionality. 
 
 
 **Power BI Data Transformation (Power Query):** 
