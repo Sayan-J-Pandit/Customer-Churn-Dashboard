@@ -131,7 +131,7 @@ SWITCH(
 )
 ```
 
-## Dashboard & Visualization
+## 📺Dashboard & Visualization
 
 ---
 Visualizations, primarily column charts, were used extensively to analyze these KPIs and identify patterns in the data.
