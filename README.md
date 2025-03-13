@@ -160,6 +160,83 @@ Additional:
 
 This project provides a **data-driven understanding of customer churn** and identifies key factors influencing retention. The insights gained from this analysis can help businesses **optimize customer engagement strategies and reduce churn rates**.
 
+----
+
+
+## 📖Story 
+**— For Stakeholders Who Prefer Stories with Numbers**  
+*(The nature of the story can be changed according to the taste of the target audience)*
+```
+
+Let's start this with a number. **26**.
+
+**26%** of customers are found to have left this journey with us.
+
+
+
+### What are the features of these 26% customers?
+
+- Almost **75%** of them are **young adults** (non-senior citizens).  
+- A staggering **94%** were **internet users**, and **70%** of them were using **fiber optics** as their internet service.  
+- **88.55%** of them were on a **month-to-month contract**.  
+- Almost **54%** had **joined us less than a year ago**.  
+- Close to **58%** had chosen **electronic checks** as their **payment method**.
+
+And there’s one more thing I'd like to highlight:
+
+- Out of **2955 tech tickets** raised in total, **2173** came from this **26%** population.  
+- But when it comes to **Admin tickets**, only **885** out of **3632** were raised by them.
+
+
+
+## Now, what does that tell us?  
+**Any guesses? Any guesses?**
+
+
+
+All these factors point towards one thing:  
+👉 **Issues with the internet service we are providing.**
+
+Yes, there can be small, scattered reasons,  
+but the **dominant factor** seems to be something wrong with the **internet service** we provide.
+
+
+
+## And why are we so sure about this?
+
+Because when we look at other factors—  
+- Gender  
+- Having or not having multiple lines  
+- Or any other factor  
+   
+None of them make a significant difference.  
+Every analysis relays the **same statement** again and again.
+
+
+
+## So, what can we do with these insights?
+
+This is where we feel the **need for more data**:
+
+- What's the **position of our competitors**?  
+- What **offers** are they bringing to the table?  
+- What do the **churned customers** say?  
+- And what do the **retained customers** say?
+
+Surveys and **customer feedback** will help us design **more informed, targeted solutions**.
+
+
+
+## But based on the data we have right now, one thing is clear:
+
+If we **take care of our internet services**  
+and make the customer journey more **engaging**, **dynamic**, and **hooking**,  
+especially keeping the **age group** and their **preferences** in mind,  
+we can make a **big difference**.
+
+```
+---
+
 
 ## 🚀 How to Use This Repository
 1. Download the dataset from the provided sources.
