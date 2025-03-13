@@ -1,21 +1,21 @@
 
- # Customer Churn Analysis
+ # **Customer Churn Analysis**
 
  
-## Author: Sayan Pandit
+## 📝Author: Sayan Pandit
 
 
 This project analyzes customer churn for a telecommunications company, identifying key factors contributing to churn and providing data-driven recommendations to reduce it. The analysis is designed to be easily understood by a non-technical audience.
 
 
- ## Objectives 
+ ## 🎯Objectives 
 
 * **Identify Reasons for Churn:** Uncover the primary drivers behind customer attrition. 
 
 * **Provide Recommendations:** Suggest actionable strategies to minimize churn based on data insights. 
 
 
-## Data Source 
+## 🗂️Data Source 
 
 The dataset used for this analysis is publicly available and can be found at the following locations: 
 
@@ -26,7 +26,7 @@ The dataset used for this analysis is publicly available and can be found at the
 
  The data was prepared using a combination of tools to ensure clarity and consistency. 
 
-**Tools Used:** 
+**🛠️Tools Used:** 
 
 * Excel 
 * Power Query (within Power BI) 
@@ -81,7 +81,7 @@ else if [Tenure] < 60 then "<5 Years"
 else if [Tenure] < 72 then "<6 Years"
 else "6+ Years"
 ```
-## Analytics (Power BI Measures)
+## 📊Analytics (Power BI Measures)
 Used **DAX formulas** to derive key metrics for churn analysis:
 
 #### **%Device Protection**
