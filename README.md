@@ -244,3 +244,9 @@ we can make a **big difference**.
 3. Review the transformations in **Power Query & DAX measures**.
 4. Use the insights and recommendations to improve customer retention strategies.
 **For further details or inquiries, feel free to reach out!** 🎯
+
+
+## 🔗 Get in Touch  
+Feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/the-sayan-pandit/) or check out more of my work!  
+
+📩 Let’s discuss how can we drive better insights using different tools!  
